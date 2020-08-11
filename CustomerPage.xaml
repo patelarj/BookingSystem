@@ -1,0 +1,47 @@
+﻿<Window x:Class="Midterm.CustomerPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Midterm"
+        Background="DimGray"
+        mc:Ignorable="d"
+        Title="CustomerPage" Height="450" Width="800">
+    <Grid>
+        <Menu VerticalAlignment="Top">
+            <MenuItem HorizontalAlignment="Left" VerticalAlignment="Top" Header="_File">
+                <MenuItem Header="_New"/>
+                <MenuItem Header="_Save"/>
+                <Separator/>
+                <MenuItem Header="_Quit" Click="Quit_Clicked"/>
+
+
+
+            </MenuItem>
+            <MenuItem HorizontalAlignment="Left" VerticalAlignment="Top" Header="_Edit" >
+                <MenuItem Header="_Insert" Click="Insert_Clicekd"/>
+                <MenuItem Header="_Update" Click="Update_Clicekd "/>
+                <Separator/>
+                <MenuItem Header="_Delete" Click="Delet_Clicekd"/>
+            </MenuItem>
+            <MenuItem HorizontalAlignment="Left" VerticalAlignment="Top" Header="_Help">
+
+            </MenuItem>
+        </Menu>
+        <ListBox x:Name="fname"    HorizontalContentAlignment="Stretch"  ItemsSource="{Binding}" Margin="48,66,571,66" SelectionChanged="fname_selection">
+
+
+        </ListBox>
+        <StackPanel Margin="375,66,125,114">
+            <Label Content="Name:"/>
+            <TextBox x:Name="txtname"></TextBox>
+            <Label Content="Address:"/>
+            <TextBox x:Name="txtaddress"></TextBox>
+            <Label Content="Phone:"/>
+            <TextBox x:Name="txtphone"></TextBox>
+            <Label Content="Email:"/>
+            <TextBox x:Name="txtemail"></TextBox>
+        </StackPanel>
+
+    </Grid>
+</Window>
